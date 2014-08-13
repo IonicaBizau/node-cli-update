@@ -1,14 +1,17 @@
 var CLIUpdate = module.exports = {};
-CLIUpdate.current = 0;
+CLIUpdate.current = -1;
 CLIUpdate.history = [];
 CLIUpdate.navigation = function () {};
-CLIUpdate.render = function (output, pushHistory, data) {
+CLIUpdate.changed = function () {};
+CLIUpdate.render = function (output, pushHistory, data, emitChanged) {
     if (pushHistory !== false) {
-        CLIUpdate.history.push({
+        CLIUpdate.history[++CLIUpdate.current] = {
             content: output
           , data: data
-        });
-        CLIUpdate.current = CLIUpdate.history.length - 1;
+        };
+    }
+    if (emitChanged !== false) {
+        CLIUpdate.changed(output);
     }
     console.log(output);
 };
