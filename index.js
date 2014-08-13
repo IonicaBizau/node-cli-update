@@ -1,9 +1,13 @@
 var CLIUpdate = module.exports = {};
 CLIUpdate.current = 0;
 CLIUpdate.history = [];
-CLIUpdate.render = function (output, pushHistory) {
+CLIUpdate.navigation = function () {};
+CLIUpdate.render = function (output, pushHistory, data) {
     if (pushHistory !== false) {
-        CLIUpdate.history.push(output);
+        CLIUpdate.history.push({
+            content: output
+          , data: data
+        });
         CLIUpdate.current = CLIUpdate.history.length - 1;
     }
     console.log(output);
@@ -11,13 +15,14 @@ CLIUpdate.render = function (output, pushHistory) {
 
 CLIUpdate.back = function () {
     var o = CLIUpdate.history[--CLIUpdate.current];
-    //console.log("------------", CLIUpdate.current, CLIUpdate.history.length);
     if (!o) { return ++CLIUpdate.current; }
-    CLIUpdate.render(o, true);
+    CLIUpdate.navigation(o.data);
+    CLIUpdate.render(o.content, false);
 };
 
 CLIUpdate.next = function () {
     var o = CLIUpdate.history[++CLIUpdate.current];
     if (!o) { return --CLIUpdate.current; }
-    CLIUpdate.render(o, true);
+    CLIUpdate.navigation(o.data);
+    CLIUpdate.render(o.content, false);
 };
