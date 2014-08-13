@@ -1,0 +1,24 @@
+{
+  "name": "cli-update",
+  "version": "0.0.1",
+  "description": "A library to update stdout output.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:IonicaBizau/node-cli-update.git"
+  },
+  "keywords": [
+    "stdout",
+    "nodejs",
+    "cli"
+  ],
+  "author": "Ionică Bizău <bizauionica@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IonicaBizau/node-cli-update/issues"
+  },
+  "homepage": "https://github.com/IonicaBizau/node-cli-update"
+}
