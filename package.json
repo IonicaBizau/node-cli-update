@@ -20,5 +20,12 @@
   "bugs": {
     "url": "https://github.com/IonicaBizau/node-cli-update/issues"
   },
-  "homepage": "https://github.com/IonicaBizau/node-cli-update"
+  "homepage": "https://github.com/IonicaBizau/node-cli-update",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {
+    "cli-box": "^2.0.1",
+    "couleurs": "^2.0.0"
+  }
 }
