@@ -29,11 +29,20 @@ function getDateTime() {
     return hour + " : " + min + " : " + sec;
 }
 
+var cliColumns = process.stdout.columns;
+// Compensate for bug #4
+if (/^win(32|64)$/.test(require('os').platform())) {
+  cliColumns -= 1;
+}
+
+// 3 = 1 (top border) + 1 (bottom border) + 1 (bottom padding)
+var cliRows = process.stdout.rows - 3;
+
 setInterval(function () {
     Figlet(getDateTime(), function(err, data) {
         data = data.split("\n").map(function (c) { return c.bg("#c0392b") + "\u001b[45m"; }).join("\n");
         CliUpdate.render(
-            new CliBox(process.stdout.columns + "x" + (process.stdout.rows - 3), data).toString().split("\n").map(function (c) {
+            new CliBox(cliColumns + "x" + cliRows, data).toString().split("\n").map(function (c) {
                 return c.bg("#2980b9");
             }).join("\n")
         );
