@@ -26,6 +26,7 @@
   },
   "devDependencies": {
     "cli-box": "^2.0.1",
+    "figlet": "^1.1.0",
     "couleurs": "^2.0.0"
   }
 }
