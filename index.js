@@ -48,6 +48,7 @@ CLIUpdate.render = function (output, pushHistory, data, emitChanged) {
     }
 
     CLIUpdate.last = output;
+    return CLIUpdate;
 };
 
 /**
@@ -63,6 +64,7 @@ CLIUpdate.back = function () {
     if (!o) { return ++CLIUpdate.current; }
     CLIUpdate.navigation(o.data);
     CLIUpdate.render(o.content, false);
+    return CLIUpdate;
 };
 
 /**
@@ -78,4 +80,5 @@ CLIUpdate.next = function () {
     if (!o) { return --CLIUpdate.current; }
     CLIUpdate.navigation(o.data);
     CLIUpdate.render(o.content, false);
+    return CLIUpdate;
 };
