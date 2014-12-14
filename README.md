@@ -2,13 +2,13 @@ CLI Update
 ==========
 A library to update stdout output.
 
-## Installation
+# Installation
 
 ```sh
 $ npm install cli-update
 ```
 
-## Example
+# Example
 
 ```js
 // Dependencies
@@ -57,7 +57,7 @@ setInterval(function () {
 ````
 
 
-## Documentation
+# Documentation
 ## `render(output, pushHistory, data, emitChanged)`
 Render the current output.
 
@@ -82,8 +82,7 @@ Go to the next output in the history.
 ### Return
 - **Object** The CLIUpdate object.
 
-## How to contribute
-
+# How to contribute
 1. File an issue in the repository, using the bug tracker, describing the
    contribution you'd like to make. This will help us to get you started on the
    right foot.
@@ -93,5 +92,13 @@ Go to the next output in the history.
 4. Open a pull request, and reference the initial issue in the pull request
    message.
 
-## License
+# Changelog
+
+## `1.0.0`
+ - Initial stable release.
+
+## `0.0.x`
+ - Prereleases.
+
+# License
 See the [LICENSE](./LICENSE) file.
