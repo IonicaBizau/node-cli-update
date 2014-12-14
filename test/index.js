@@ -1,3 +1,4 @@
+// Dependencies
 var CliUpdate = require("../index")
   , CliBox = require("cli-box")
   , c = require("couleurs")(true)
@@ -29,6 +30,7 @@ function getDateTime() {
     return hour + " : " + min + " : " + sec;
 }
 
+// Render time in a fancy format
 setInterval(function () {
     Figlet(getDateTime(), function(err, data) {
         data = data.split("\n").map(function (c) { return c.bg("#c0392b") + "\u001b[45m"; }).join("\n");
