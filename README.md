@@ -1,14 +1,86 @@
-# cli-update
+CLI Update
+==========
 A library to update stdout output.
 
 ## Installation
-Run the following commands to download and install the application:
 
 ```sh
-$ git clone git@github.com:IonicaBizau/node-cli-update.git cli-update
-$ cd cli-update
-$ npm install
+$ npm install cli-update
 ```
+
+## Example
+
+```js
+// Dependencies
+var CliUpdate = require("../index")
+  , CliBox = require("cli-box")
+  , c = require("couleurs")(true)
+  , Figlet = require("figlet")
+  ;
+
+// http://stackoverflow.com/a/16426519/1420197
+function getDateTime() {
+
+    var date = new Date();
+
+    var hour = date.getHours();
+    hour = (hour < 10 ? "0" : "") + hour;
+
+    var min  = date.getMinutes();
+    min = (min < 10 ? "0" : "") + min;
+
+    var sec  = date.getSeconds();
+    sec = (sec < 10 ? "0" : "") + sec;
+
+    var year = date.getFullYear();
+
+    var month = date.getMonth() + 1;
+    month = (month < 10 ? "0" : "") + month;
+
+    var day  = date.getDate();
+    day = (day < 10 ? "0" : "") + day;
+
+    return hour + " : " + min + " : " + sec;
+}
+
+// Render time in a fancy format
+setInterval(function () {
+    Figlet(getDateTime(), function(err, data) {
+        data = data.split("\n").map(function (c) { return c.bg("#c0392b") + "\u001b[45m"; }).join("\n");
+        CliUpdate.render(
+            new CliBox(process.stdout.columns + "x" + (process.stdout.rows - 3), data).toString().split("\n").map(function (c) {
+                return c.bg("#2980b9");
+            }).join("\n")
+        );
+    });
+}, 1000);
+````
+
+
+## Documentation
+## `render(output, pushHistory, data, emitChanged)`
+Render the current output.
+
+### Params
+- **String** `output`: The output that should be printed in stdout.
+- **Boolean** `pushHistory`: Push or not push the output in history (default: true).
+- **Object** `data`:
+- **Boolean** `emitChanged`: Call or not call the changed handler (deafult: true).
+
+### Return
+- **Object** The CLIUpdate object.
+
+## `back()`
+Go to the previous output in the history.
+
+### Return
+- **Object** The CLIUpdate object.
+
+## `next()`
+Go to the next output in the history.
+
+### Return
+- **Object** The CLIUpdate object.
 
 ## How to contribute
 
