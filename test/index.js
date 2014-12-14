@@ -35,7 +35,7 @@ setInterval(function () {
     Figlet(getDateTime(), function(err, data) {
         data = data.split("\n").map(function (c) { return c.bg("#c0392b") + "\u001b[45m"; }).join("\n");
         CliUpdate.render(
-            new CliBox(process.stdout.columns + "x" + (process.stdout.rows - 3), data).toString().split("\n").map(function (c) {
+            new CliBox({fullscreen: true, marks: {}}, data).toString().split("\n").map(function (c) {
                 return c.bg("#2980b9");
             }).join("\n")
         );
