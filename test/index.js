@@ -1,5 +1,5 @@
 // Dependencies
-var CliUpdate = require("../index")
+var CliUpdate = require("../lib")
   , CliBox = require("cli-box")
   , c = require("couleurs")(true)
   , Figlet = require("figlet")
