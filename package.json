@@ -16,7 +16,7 @@
     "cli"
   ],
   "author": "Ionică Bizău <bizauionica@gmail.com>",
-  "license": "MIT",
+  "license": "KINDLY",
   "bugs": {
     "url": "https://github.com/IonicaBizau/node-cli-update/issues"
   },
@@ -25,8 +25,8 @@
     "test": "test"
   },
   "devDependencies": {
-    "cli-box": "^2.1.1",
-    "figlet": "^1.1.0",
-    "couleurs": "^2.0.0"
+    "cli-box": "^5.0.0",
+    "couleurs": "^5.0.0",
+    "figlet": "^1.1.0"
   }
 }
