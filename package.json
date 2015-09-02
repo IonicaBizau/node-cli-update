@@ -22,11 +22,16 @@
   },
   "homepage": "https://github.com/IonicaBizau/node-cli-update",
   "directories": {
-    "test": "test"
+    "example": "example"
   },
   "devDependencies": {
     "cli-box": "^5.0.0",
     "couleurs": "^5.0.0",
     "figlet": "^1.1.0"
+  },
+  "dependencies": {
+    "cli-box": "^5.0.0",
+    "figlet": "^1.1.1",
+    "couleurs": "^5.0.0"
   }
 }
