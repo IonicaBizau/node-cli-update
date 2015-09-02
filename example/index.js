@@ -1,7 +1,7 @@
 // Dependencies
-var CliUpdate = require("../index")
+var CliUpdate = require("../lib")
   , CliBox = require("cli-box")
-  , c = require("couleurs")(true)
+  , Couleurs = require("couleurs")()
   , Figlet = require("figlet")
   ;
 
@@ -19,24 +19,19 @@ function getDateTime() {
     var sec  = date.getSeconds();
     sec = (sec < 10 ? "0" : "") + sec;
 
-    var year = date.getFullYear();
-
-    var month = date.getMonth() + 1;
-    month = (month < 10 ? "0" : "") + month;
-
-    var day  = date.getDate();
-    day = (day < 10 ? "0" : "") + day;
-
     return hour + " : " + min + " : " + sec;
 }
 
 // Render time in a fancy format
 setInterval(function () {
     Figlet(getDateTime(), function(err, data) {
-        data = data.split("\n").map(function (c) { return c.bg("#c0392b") + "\u001b[45m"; }).join("\n");
+        data = data.split("\n").map(function (c) { return Couleurs.bg(c, "#c0392b") + "\u001b[45m"; }).join("\n");
         CliUpdate.render(
-            new CliBox({fullscreen: true, marks: {}}, data).toString().split("\n").map(function (c) {
-                return c.bg("#2980b9");
+            CliBox({
+                fullscreen: true
+              , marks: {}
+            }, data).split("\n").map(function (c) {
+                return Couleurs.bg(c, "#2980b9");
             }).join("\n")
         );
     });
