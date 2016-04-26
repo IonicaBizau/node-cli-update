@@ -1,14 +1,18 @@
+
 # cli-update [![PayPal](https://img.shields.io/badge/%24-paypal-f39c12.svg)][paypal-donations] [![Version](https://img.shields.io/npm/v/cli-update.svg)](https://www.npmjs.com/package/cli-update) [![Downloads](https://img.shields.io/npm/dt/cli-update.svg)](https://www.npmjs.com/package/cli-update) [![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/johnnyb?utm_source=github&utm_medium=button&utm_term=johnnyb&utm_campaign=github)
 
 > A library to update stdout output.
 
-## Installation
+## :cloud: Installation
 
 ```sh
 $ npm i --save cli-update
 ```
 
-## Example
+
+## :clipboard: Example
+
+
 
 ```js
 // Dependencies
@@ -51,7 +55,8 @@ setInterval(function () {
 }, 1000);
 ```
 
-## Documentation
+## :memo: Documentation
+
 
 ### `render(output, pushHistory, data, emitChanged)`
 Render the current output.
@@ -77,23 +82,22 @@ Go to the next output in the history.
 #### Return
 - **Object** The CLIUpdate object.
 
-## How to contribute
+
+
+## :yum: How to contribute
 Have an idea? Found a bug? See [how to contribute][contributing].
 
-## Where is this library used?
+## :dizzy: Where is this library used?
 If you are using this library in one of your projects, add it in this list. :sparkles:
 
- - [`artstack-downloader`](https://github.com/IonicaBizau/artstack-downloader)
 
- - [`ascii-github`](https://npmjs.com/package/ascii-github)
+ - [`artstack-downloader`](https://github.com/IonicaBizau/artstack-downloader)—Download artworks from your following users.
+ - [`ascii-github`](https://npmjs.com/package/ascii-github)—GitHub CLI Client
+ - [`cli-frames`](https://github.com/IonicaBizau/node-cli-frames)—Create CLI animations using text frames.
+ - [`cli-github`](https://github.com/IonicaBizau/cli-github)—A fancy GitHub client for command line.
+ - [`cli-snow`](https://github.com/IonicaBizau/cli-snow)—Snow, snow, snow! Let it snow, in terminal!
 
- - [`cli-frames`](https://github.com/IonicaBizau/node-cli-frames)
-
- - [`cli-github`](https://github.com/IonicaBizau/cli-github)
-
- - [`cli-snow`](https://github.com/IonicaBizau/cli-snow)
-
-## License
+## :scroll: License
 
 [MIT][license] © [Ionică Bizău][website]
 
