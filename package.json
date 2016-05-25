@@ -1,6 +1,6 @@
 {
   "name": "cli-update",
-  "version": "2.2.2",
+  "version": "2.2.3",
   "description": "A library to update stdout output.",
   "main": "lib/index.js",
   "scripts": {
@@ -38,6 +38,7 @@
     "src/",
     "resources/",
     "menu/",
+    "scripts/",
     "cli.js",
     "index.js"
   ]
