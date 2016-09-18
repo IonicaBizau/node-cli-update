@@ -29,7 +29,10 @@
     "couleurs": "^6.0.3",
     "figlet": "^1.1.1"
   },
-  "dependencies": {},
+  "dependencies": {
+    "cli-resize": "^2.0.0",
+    "cli-size": "^1.0.0"
+  },
   "files": [
     "bin/",
     "app/",
