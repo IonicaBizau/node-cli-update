@@ -25,9 +25,9 @@
     "example": "example"
   },
   "devDependencies": {
-    "cli-box": "^5.0.0",
-    "figlet": "^1.1.1",
-    "couleurs": "^5.0.0"
+    "cli-box": "^6.0.2",
+    "couleurs": "^6.0.3",
+    "figlet": "^1.1.1"
   },
   "dependencies": {},
   "files": [
