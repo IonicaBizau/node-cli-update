@@ -12,17 +12,17 @@ Render the current output.
 - **Boolean** `emitChanged`: Call or not call the changed handler (deafult: true).
 
 #### Return
-- **Object** The CLIUpdate object.
+- **Object** The CliUpdate object.
 
 ### `back()`
 Go to the previous output in the history.
 
 #### Return
-- **Object** The CLIUpdate object.
+- **Object** The CliUpdate object.
 
 ### `next()`
 Go to the next output in the history.
 
 #### Return
-- **Object** The CLIUpdate object.
+- **Object** The CliUpdate object.
 

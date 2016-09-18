@@ -70,34 +70,25 @@ Render the current output.
 - **Boolean** `emitChanged`: Call or not call the changed handler (deafult: true).
 
 #### Return
-- **Object** The CLIUpdate object.
+- **Object** The CliUpdate object.
 
 ### `back()`
 Go to the previous output in the history.
 
 #### Return
-- **Object** The CLIUpdate object.
+- **Object** The CliUpdate object.
 
 ### `next()`
 Go to the next output in the history.
 
 #### Return
-- **Object** The CLIUpdate object.
+- **Object** The CliUpdate object.
 
 
 
 ## :yum: How to contribute
 Have an idea? Found a bug? See [how to contribute][contributing].
 
-## :dizzy: Where is this library used?
-If you are using this library in one of your projects, add it in this list. :sparkles:
-
-
- - [`artstack-downloader`](https://github.com/IonicaBizau/artstack-downloader)—Download artworks from your following users.
- - [`ascii-github`](https://npmjs.com/package/ascii-github)—GitHub CLI Client
- - [`cli-frames`](https://github.com/IonicaBizau/node-cli-frames)—Create CLI animations using text frames.
- - [`cli-github`](https://github.com/IonicaBizau/cli-github)—A fancy GitHub client for command line.
- - [`cli-snow`](https://github.com/IonicaBizau/cli-snow)—Snow, snow, snow! Let it snow, in terminal!
 
 ## :scroll: License
 
