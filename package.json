@@ -1,6 +1,6 @@
 {
   "name": "cli-update",
-  "version": "3.2.2",
+  "version": "3.2.3",
   "description": "A library to update stdout output.",
   "main": "lib/index.js",
   "scripts": {
@@ -15,7 +15,7 @@
     "nodejs",
     "cli"
   ],
-  "author": "Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net)",
+  "author": "Ionică Bizău <bizauionica@gmail.com> (https://ionicabizau.net)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/IonicaBizau/node-cli-update/issues"
@@ -37,12 +37,11 @@
     "bin/",
     "app/",
     "lib/",
-    "build/",
     "dist/",
     "src/",
+    "scripts/",
     "resources/",
     "menu/",
-    "scripts/",
     "cli.js",
     "index.js"
   ]
