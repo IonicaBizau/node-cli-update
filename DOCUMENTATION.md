@@ -6,6 +6,7 @@ You can see below the API reference of this module.
 Render the current output.
 
 #### Params
+
 - **String** `output`: The output that should be printed in stdout.
 - **Boolean** `pushHistory`: Push or not push the output in history (default: true).
 - **Object** `data`:
